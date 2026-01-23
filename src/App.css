@@ -1,0 +1,160 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* ===== Background ===== */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f4c81, #1e88e5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Overlay ===== */
+.overlay {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(15, 76, 129, 0.45);
+}
+
+/* ===== Card ===== */
+.form-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem 2.25rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.5s ease;
+}
+
+.form-card h1 {
+  margin-bottom: 0.5rem;
+  color: #0f4c81;
+}
+
+.form-card p {
+  color: #4a5d73;
+}
+
+/* ===== Benefits ===== */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.benefits-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Form Layout ===== */
+.styled-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Desktop: 2 columns */
+@media (min-width: 768px) {
+  .styled-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .styled-form button {
+    grid-column: span 2;
+  }
+}
+
+/* ===== Inputs ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #334155;
+}
+
+.form-group input {
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d0d7e2;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.25);
+}
+
+/* ===== Button ===== */
+.styled-form button {
+  padding: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  box-shadow: 0 10px 22px rgba(30, 136, 229, 0.35);
+}
+
+.styled-form button:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== CTA ===== */
+.cta-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #0f4c81;
+  text-align: center;
+}
+
+/* ===== Floating Icons ===== */
+.floating-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.loan-icon {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.15;
+  color: white;
+  animation: float 10s ease-in-out infinite;
+}
+
+.loan-icon:nth-child(1) { top: 15%; left: 10%; }
+.loan-icon:nth-child(2) { top: 60%; left: 80%; animation-delay: 2s; }
+.loan-icon:nth-child(3) { top: 75%; left: 20%; animation-delay: 4s; }
+.loan-icon:nth-child(4) { top: 30%; left: 70%; animation-delay: 6s; }
+.loan-icon:nth-child(5) { top: 45%; left: 40%; animation-delay: 8s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
