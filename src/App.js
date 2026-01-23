@@ -57,13 +57,15 @@ function App() {
               ✅ Thank you! Your enquiry has been submitted.
             </h3>
           ) : (
-            <form
-              name="loan-enquiry"
-              method="POST"
-              data-netlify="true"
-              className="styled-form"
-              onSubmit={() => setSubmitted(true)}
-            >
+              <form
+                name="loan-enquiry"
+                method="POST"
+                data-netlify="true"
+                className="styled-form"
+                onSubmit={() => {
+                  setSubmitted(true);
+                }}
+              >
               {/* Netlify hidden input */}
               <input type="hidden" name="form-name" value="loan-enquiry" />
 
