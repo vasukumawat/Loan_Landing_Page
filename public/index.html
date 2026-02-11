@@ -1,10 +1,12 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <div id="root"></div>
-
-  <!-- Netlify Form Detection (Required for React SPA) -->
-  <form name="loan-enquiry" netlify hidden>
+  <!-- VERY IMPORTANT: Netlify form detection – must be here for build-time scanning -->
+  <form name="loan-enquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="loan-enquiry" />
+    <!-- Honeypot (spam protection) – leave empty, bots fill it -->
+    <input type="text" name="bot-field" />
+    <!-- Mirror ALL fields exactly (names must match your React form) -->
     <input name="firstName" />
     <input name="lastName" />
     <input name="email" />
@@ -13,4 +15,5 @@
     <input name="requiredLoanAmount" />
   </form>
 
+  <div id="root"></div>
 </body>
