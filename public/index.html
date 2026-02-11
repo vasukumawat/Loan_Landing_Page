@@ -1,19 +1,30 @@
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- VERY IMPORTANT: Put viewport here (not in body!) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- You can add maximum-scale if you want to prevent zoom on inputs: -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="description" content="Affordable Personal Loan Enquiry" />
+    <title>Affordable Personal Loan</title>
+    <!-- other meta / link tags like favicon, manifest, etc. -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <!-- VERY IMPORTANT: Netlify form detection – must be here for build-time scanning -->
-  <form name="loan-enquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="loan-enquiry" />
-    <!-- Honeypot (spam protection) – leave empty, bots fill it -->
-    <input type="text" name="bot-field" />
-    <!-- Mirror ALL fields exactly (names must match your React form) -->
-    <input name="firstName" />
-    <input name="lastName" />
-    <input name="email" />
-    <input name="mobile" />
-    <input name="monthlySalary" />
-    <input name="requiredLoanAmount" />
-  </form>
+    <!-- Netlify form detection – keep this in body (hidden) -->
+    <form name="loan-enquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="loan-enquiry" />
+      <input type="text" name="bot-field" />
+      <input name="firstName" />
+      <input name="lastName" />
+      <input name="email" />
+      <input name="mobile" />
+      <input name="monthlySalary" />
+      <input name="requiredLoanAmount" />
+    </form>
 
-  <div id="root"></div>
-</body>
+    <div id="root"></div>
+  </body>
+</html>
